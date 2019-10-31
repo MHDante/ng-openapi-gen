@@ -68,6 +68,16 @@ export class {{ requestBuilderClass }} {
     }
   }
 
+
+  /**
+   * Sets the body content for a single form-data
+   */
+  formData(key: string, value: Blob) {
+    let obj = {};
+    obj[key] = value;
+    this.body(value, 'multipart/form-data');
+  }
+
   /**
    * Sets the body content, along with the content type
    */
