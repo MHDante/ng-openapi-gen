@@ -38,7 +38,7 @@ export class Model extends GenType {
     this.tsComments = tsComments(description, 0);
 
     const type = schema.type || 'any';
-    const names = schema["x-enumNames"] || null;
+    const names = schema['x-enumNames'] || null;
 
     // When enumStyle is 'alias' it is handled as a simple type.
     if (options.enumStyle !== 'alias' && (schema.enum || []).length > 0 && ['string', 'number', 'integer'].includes(type)) {
